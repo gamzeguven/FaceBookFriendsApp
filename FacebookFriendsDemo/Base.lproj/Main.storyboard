@@ -42,17 +42,17 @@
                     <connections>
                         <outlet property="passwordText" destination="hIg-w4-93p" id="mVn-BG-09s"/>
                         <outlet property="userNameText" destination="4HI-7m-TgK" id="GIk-yU-5MB"/>
-                        <segue destination="A5V-dc-T5N" kind="show" id="u7J-dg-V9X"/>
+                        <segue destination="A5V-dc-T5N" kind="show" identifier="toFriendsVC" id="u7J-dg-V9X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="118.52678571428571"/>
         </scene>
-        <!--Table View Controller-->
+        <!--User Table View Controller-->
         <scene sceneID="Aj3-Rq-HK1">
             <objects>
-                <tableViewController id="n1h-Sm-YvT" sceneMemberID="viewController">
+                <tableViewController wantsFullScreenLayout="YES" id="n1h-Sm-YvT" customClass="UserTableViewController" customModule="FacebookFriendsDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Jty-Cp-tLW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

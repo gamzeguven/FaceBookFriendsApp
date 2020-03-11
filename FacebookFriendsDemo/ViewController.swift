@@ -17,14 +17,26 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    func save(category: Post) {
+        let newCategory = Category()
+        newCategory.id = category.id
+        newCategory.name = category.name
+        newCategory.age = category.age
         
-        //getJsonData()
+        do {
+            try realm.write {
+                realm.add(newCategory)
+                print(newCategory.name + " added local")
+            }
+        } catch {
+            print("Error saving category \(error)")
+        }
     }
     
     func getJsonData () {
-        
-    //let user = TestUser()
-           
+                
         let username = userNameText.text
            
         let url = URL(string: "https://api.myjson.com/bins/\(username!))")
@@ -42,13 +54,15 @@ class ViewController: UIViewController {
                        //let jsonResponse = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers)
                    
                        let jsonDecode = try JSONDecoder().decode([Post].self ,  from:data!)
-                       
-                       DispatchQueue.main.async {
+                        DispatchQueue.main.async {
+                        //var newCategory = Category()
+                        //var emptyCategory = Category()
                            for i in jsonDecode{
-                               print(i.id)
-                               print(i.name)
-                               print(i.age)
-                            
+                               //newCategory.id = i.id
+                               //newCategory.name = i.name
+                               //newCategory.age = i.age
+                               self.save(category: i)
+                            //newCategory.id = emptyCategory.id
                            }
                        }
                        
@@ -64,6 +78,8 @@ class ViewController: UIViewController {
     
     @IBAction func logInButton(_ sender: Any) {
         getJsonData()
+        self.performSegue(withIdentifier: "toFriendsVC", sender: nil)
+
     }
 }
    

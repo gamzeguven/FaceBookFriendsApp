@@ -18,6 +18,12 @@ class Items : Decodable {
     let id: String
 }
 
+class Category: Object {
+    @objc dynamic var id: String = ""
+    @objc dynamic var name: String = ""
+    @objc dynamic var age: Int = 0
+    
+}
 //
 //class TestUser: Object {
 //
