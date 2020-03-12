@@ -15,7 +15,11 @@
 		FE0A2930241537C70031A09F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE0A292F241537C70031A09F /* Assets.xcassets */; };
 		FE0A2933241537C70031A09F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE0A2931241537C70031A09F /* LaunchScreen.storyboard */; };
 		FE0D16ED2418018300011B1E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0D16EC2418018300011B1E /* Post.swift */; };
-		FE0D16F42419980C00011B1E /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0D16F22419980C00011B1E /* UserTableViewController.swift */; };
+		FEC4BCB82419B11E00470292 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC4BCB72419B11E00470292 /* UserViewController.swift */; };
+		FEC4BCBD241A3AB100470292 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC4BCBC241A3AB100470292 /* UIViewController+Extension.swift */; };
+		FEC4BCC1241A3FB500470292 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC4BCBF241A3FB500470292 /* UserCell.swift */; };
+		FEC4BCC2241A3FB500470292 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEC4BCC0241A3FB500470292 /* UserCell.xib */; };
+		FEC4BCC5241A428E00470292 /* UserDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC4BCC4241A428E00470292 /* UserDetailController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +35,11 @@
 		FE0A2932241537C70031A09F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE0A2934241537C70031A09F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE0D16EC2418018300011B1E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
-		FE0D16F32419980C00011B1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Base; path = Base.lproj/UserTableViewController.swift; sourceTree = "<group>"; };
+		FEC4BCB72419B11E00470292 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		FEC4BCBC241A3AB100470292 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		FEC4BCBF241A3FB500470292 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		FEC4BCC0241A3FB500470292 /* UserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
+		FEC4BCC4241A428E00470292 /* UserDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,10 +92,11 @@
 		FE0A2925241537C00031A09F /* FacebookFriendsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				FEC4BCC3241A426E00470292 /* Controllers */,
+				FEC4BCBE241A3FA700470292 /* TableCells */,
+				FEC4BCBB241A3A9900470292 /* Extensions */,
 				FE0A2926241537C00031A09F /* AppDelegate.swift */,
 				FE0A2928241537C00031A09F /* SceneDelegate.swift */,
-				FE0A292A241537C00031A09F /* ViewController.swift */,
-				FE0D16F22419980C00011B1E /* UserTableViewController.swift */,
 				FE0A293A2416EFD60031A09F /* DataModel */,
 				FE0A292C241537C00031A09F /* Main.storyboard */,
 				FE0A292F241537C70031A09F /* Assets.xcassets */,
@@ -103,6 +112,33 @@
 				FE0D16EC2418018300011B1E /* Post.swift */,
 			);
 			path = DataModel;
+			sourceTree = "<group>";
+		};
+		FEC4BCBB241A3A9900470292 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FEC4BCBC241A3AB100470292 /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FEC4BCBE241A3FA700470292 /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				FEC4BCC0241A3FB500470292 /* UserCell.xib */,
+				FEC4BCBF241A3FB500470292 /* UserCell.swift */,
+			);
+			path = TableCells;
+			sourceTree = "<group>";
+		};
+		FEC4BCC3241A426E00470292 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FE0A292A241537C00031A09F /* ViewController.swift */,
+				FEC4BCB72419B11E00470292 /* UserViewController.swift */,
+				FEC4BCC4241A428E00470292 /* UserDetailController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEC4BCC2241A3FB500470292 /* UserCell.xib in Resources */,
 				FE0A2933241537C70031A09F /* LaunchScreen.storyboard in Resources */,
 				FE0A2930241537C70031A09F /* Assets.xcassets in Resources */,
 				FE0A292E241537C00031A09F /* Main.storyboard in Resources */,
@@ -220,10 +257,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE0D16F42419980C00011B1E /* UserTableViewController.swift in Sources */,
+				FEC4BCC1241A3FB500470292 /* UserCell.swift in Sources */,
 				FE0A292B241537C00031A09F /* ViewController.swift in Sources */,
+				FEC4BCB82419B11E00470292 /* UserViewController.swift in Sources */,
+				FEC4BCC5241A428E00470292 /* UserDetailController.swift in Sources */,
 				FE0A2927241537C00031A09F /* AppDelegate.swift in Sources */,
 				FE0A2929241537C00031A09F /* SceneDelegate.swift in Sources */,
+				FEC4BCBD241A3AB100470292 /* UIViewController+Extension.swift in Sources */,
 				FE0D16ED2418018300011B1E /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -245,14 +285,6 @@
 				FE0A2932241537C70031A09F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		FE0D16F22419980C00011B1E /* UserTableViewController.swift */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FE0D16F32419980C00011B1E /* Base */,
-			);
-			name = UserTableViewController.swift;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

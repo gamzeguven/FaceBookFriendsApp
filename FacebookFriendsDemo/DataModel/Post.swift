@@ -9,21 +9,17 @@
 import Foundation
 import RealmSwift
 
-class Post: Decodable {
-    let id: String
-    let name: String
-    let age: Int
-}
-class Items : Decodable {
-    let id: String
-}
-
-class Category: Object {
-    @objc dynamic var id: String = ""
-    @objc dynamic var name: String = ""
-    @objc dynamic var age: Int = 0
+class Post: Object, Codable {
+    @objc dynamic var id: String
+    @objc dynamic var name: String
+    @objc dynamic var age: Int
+    @objc dynamic var userName: String? = ""
     
 }
+//class Items : Codable {
+//    let id: String
+//}
+
 //
 //class TestUser: Object {
 //
