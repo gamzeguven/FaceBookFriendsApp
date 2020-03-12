@@ -46,6 +46,7 @@ class ViewController: UIViewController {
                 
                 if array.count > 0 {
                     complationHandler(array)
+
                     return
                 }
             }
@@ -58,8 +59,6 @@ class ViewController: UIViewController {
             } else{
                 if (data != nil){
                     do{
-                        //let jsonResponse = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers)
-                        
                         let postArray = try JSONDecoder().decode([Post].self ,  from:data!)
                         DispatchQueue.main.async {
                             for post in postArray {

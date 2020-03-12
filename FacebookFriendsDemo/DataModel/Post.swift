@@ -10,10 +10,12 @@ import Foundation
 import RealmSwift
 
 class Post: Object, Codable {
+    @objc dynamic var userName: String? = ""
     @objc dynamic var id: String
     @objc dynamic var name: String
     @objc dynamic var age: Int
-    @objc dynamic var userName: String? = ""
+    @objc dynamic var about: String
+    
     
 }
 //class Items : Codable {

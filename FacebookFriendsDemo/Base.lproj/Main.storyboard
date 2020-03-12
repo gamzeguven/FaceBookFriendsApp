@@ -109,6 +109,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="aboutLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aoj-26-lQV">
+                                <rect key="frame" x="20" y="153" width="374" height="261"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -119,12 +126,13 @@
                         <viewLayoutGuide key="safeArea" id="OcB-TQ-eaZ"/>
                     </view>
                     <connections>
+                        <outlet property="aboutLabel" destination="Aoj-26-lQV" id="g2O-q9-gPC"/>
                         <outlet property="nameLabel" destination="1co-Vg-fJe" id="457-Um-yk6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uxZ-kh-aAJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1681" y="119"/>
+            <point key="canvasLocation" x="1679.7101449275362" y="118.52678571428571"/>
         </scene>
     </scenes>
 </document>
