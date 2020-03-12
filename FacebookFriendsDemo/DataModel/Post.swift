@@ -15,17 +15,6 @@ class Post: Object, Codable {
     @objc dynamic var name: String
     @objc dynamic var age: Int
     @objc dynamic var about: String
-    
-    
+    @objc dynamic var email: String
 }
-//class Items : Codable {
-//    let id: String
-//}
-
-//
-//class TestUser: Object {
-//
-//    dynamic var username : String = "9nd54"
-//}
-
 
