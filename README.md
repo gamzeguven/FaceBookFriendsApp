@@ -2,4 +2,4 @@
 FaceBookFriends
 
 # Realm
-Using Realm
+Using Realm for local database
