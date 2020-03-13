@@ -11,7 +11,6 @@ import RealmSwift
 
 typealias CompletionPostArrayHandler = (_ posts:[Post]?) -> Void
 
-
 class ViewController: UIViewController {
     let realm = try! Realm()
     
@@ -22,14 +21,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    func save(category: Post) {
+    func save(dataUser: Post) {
         do {
             try realm.write {
-                realm.add(category)
-                print(category.name + " added local")
+                realm.add(dataUser)
+                print(dataUser.name + " added local")
             }
         } catch {
-            print("Error saving category \(error)")
+            print("Error saving post \(error)")
         }
     }
     
@@ -46,31 +45,29 @@ class ViewController: UIViewController {
                 
                 if array.count > 0 {
                     complationHandler(array)
-
+                    
                     return
                 }
             }
         } catch {
-            print("UserNotFound")
+            print("Error")
         }
         let dataTask = session.dataTask(with: url!) { (data, response, error) in
-            if (error != nil){
-                
-            } else{
-                if (data != nil){
+            if let err = error {
+                self.showAlert(alertText: "Warning", alertMessage: "Unable to respond transaction.")
+            } else {
+                if data != nil {
                     do{
                         let postArray = try JSONDecoder().decode([Post].self ,  from:data!)
                         DispatchQueue.main.async {
                             for post in postArray {
                                 post.userName = self.userNameText.text ?? ""
-                                self.save(category: post)
+                                self.save(dataUser: post)
                             }
                             complationHandler(postArray)
-                            
                         }
-                        
                     } catch {
-                        print("UserNotFound")
+                        print("user not found")
                     }
                 }
             }
@@ -80,22 +77,15 @@ class ViewController: UIViewController {
     }
     
     @IBAction func logInButton(_ sender: Any) {
-        if (userNameText.text != "") {
+        if (userNameText.text != "" && passwordText.text != "") {
             getJsonData { [weak self] (posts) in
                 if let controller = UserViewController.getController(storyBoardName: "Main", controllerIdentifier: "userList") as? UserViewController {
                     controller.userFriendArray = posts
                     self?.navigationController?.pushViewController(controller, animated: true)
                 }
-                
             }
-            
-        }else{
-            let alert = UIAlertController.init(title: "Error", message: "Kullanıcı adı boş olamaz.", preferredStyle: UIAlertController.Style.alert)
-            let okButton = UIAlertAction.init(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
-            alert.addAction(okButton)
-            self.present(alert, animated: true, completion: nil)
-            
+        } else {
+            self.showAlert(alertText: "Warning", alertMessage: "Please type all fields.")
         }
     }
 }
-

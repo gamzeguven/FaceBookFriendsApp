@@ -16,8 +16,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="353" height="199"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3v5-Gw-xnf">
-                        <rect key="frame" x="148" y="86" width="172" height="27"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3v5-Gw-xnf">
+                        <rect key="frame" x="148" y="42.5" width="172" height="20.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="172" id="mMk-Sx-V1v"/>
                         </constraints>
@@ -25,22 +25,35 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="profileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="MJI-pG-2PU">
-                        <rect key="frame" x="20" y="59" width="80" height="80"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="MJI-pG-2PU">
+                        <rect key="frame" x="20" y="15" width="80" height="128.5"/>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g4X-iD-m9p">
+                        <rect key="frame" x="148" y="108" width="196" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="frL-cw-4Fe"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="MJI-pG-2PU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="CEQ-ed-Wpq"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="g4X-iD-m9p" secondAttribute="bottom" constant="63" id="HiG-Tz-38J"/>
                     <constraint firstItem="3v5-Gw-xnf" firstAttribute="leading" secondItem="MJI-pG-2PU" secondAttribute="trailing" constant="48" id="N21-qa-TFH"/>
                     <constraint firstItem="MJI-pG-2PU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="4" id="TLF-Um-bJ3"/>
-                    <constraint firstItem="3v5-Gw-xnf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="31" id="Wqb-lq-RwC"/>
                     <constraint firstAttribute="trailingMargin" secondItem="3v5-Gw-xnf" secondAttribute="trailing" constant="13" id="Yzt-3d-pVE"/>
-                    <constraint firstItem="3v5-Gw-xnf" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="stx-Zo-3HC"/>
-                    <constraint firstItem="MJI-pG-2PU" firstAttribute="centerY" secondItem="3v5-Gw-xnf" secondAttribute="centerY" id="ws3-1d-5Tn"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="g4X-iD-m9p" secondAttribute="trailing" constant="-11" id="fV2-3y-FkR"/>
+                    <constraint firstItem="g4X-iD-m9p" firstAttribute="leading" secondItem="3v5-Gw-xnf" secondAttribute="leading" id="gsq-FE-sIo"/>
+                    <constraint firstItem="g4X-iD-m9p" firstAttribute="top" secondItem="3v5-Gw-xnf" secondAttribute="bottom" constant="45" id="ie0-46-uUO"/>
+                    <constraint firstItem="MJI-pG-2PU" firstAttribute="centerY" secondItem="3v5-Gw-xnf" secondAttribute="centerY" constant="26.5" id="ws3-1d-5Tn"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="emailLabel" destination="g4X-iD-m9p" id="0km-11-RpM"/>
+                <outlet property="picture" destination="MJI-pG-2PU" id="hL2-g4-4bP"/>
                 <outlet property="userFriendLabel" destination="3v5-Gw-xnf" id="4GL-1d-r4q"/>
             </connections>
             <point key="canvasLocation" x="161.59420289855075" y="53.236607142857139"/>

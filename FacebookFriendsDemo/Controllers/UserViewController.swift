@@ -22,9 +22,7 @@ class UserViewController:  UIViewController, UITableViewDelegate, UITableViewDat
         userTable.dataSource = self
         let nib = UINib(nibName: "UserCell", bundle: nil)
         userTable.register(nib, forCellReuseIdentifier: "UserCell")
-
     }
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return userFriendArray?.count ?? 0
@@ -46,10 +44,9 @@ class UserViewController:  UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath) as? UserCell {
             cell.userFriendLabel.text =  userFriendArray?[indexPath.row].name
+            cell.emailLabel.text = userFriendArray?[indexPath.row].email
             return cell
         }
         return UITableViewCell()
     }
-    
-    
 }
