@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		322CB0C6759CBC4674B07F2B /* Pods_FacebookFriendsDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8B9F97CDFDDA3E84BEE70DE /* Pods_FacebookFriendsDemo.framework */; };
+		F0950CB6242A3C160035E61F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = F0950CB5242A3C160035E61F /* README.md */; };
 		FE0A2927241537C00031A09F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0A2926241537C00031A09F /* AppDelegate.swift */; };
 		FE0A2929241537C00031A09F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0A2928241537C00031A09F /* SceneDelegate.swift */; };
 		FE0A292B241537C00031A09F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE0A292A241537C00031A09F /* ViewController.swift */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		299360BE7FCDD57772F49AF1 /* Pods-FacebookFriendsDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FacebookFriendsDemo.debug.xcconfig"; path = "Target Support Files/Pods-FacebookFriendsDemo/Pods-FacebookFriendsDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		B335571781655BB91630136A /* Pods-FacebookFriendsDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FacebookFriendsDemo.release.xcconfig"; path = "Target Support Files/Pods-FacebookFriendsDemo/Pods-FacebookFriendsDemo.release.xcconfig"; sourceTree = "<group>"; };
+		F0950CB5242A3C160035E61F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		F8B9F97CDFDDA3E84BEE70DE /* Pods_FacebookFriendsDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FacebookFriendsDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE0A2923241537C00031A09F /* FacebookFriendsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacebookFriendsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE0A2926241537C00031A09F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				FE0A292F241537C70031A09F /* Assets.xcassets */,
 				FE0A2931241537C70031A09F /* LaunchScreen.storyboard */,
 				FE0A2934241537C70031A09F /* Info.plist */,
+				F0950CB5242A3C160035E61F /* README.md */,
 			);
 			path = FacebookFriendsDemo;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 			files = (
 				FEC4BCC2241A3FB500470292 /* UserCell.xib in Resources */,
 				FE0A2933241537C70031A09F /* LaunchScreen.storyboard in Resources */,
+				F0950CB6242A3C160035E61F /* README.md in Resources */,
 				FE0A2930241537C70031A09F /* Assets.xcassets in Resources */,
 				FE0A292E241537C00031A09F /* Main.storyboard in Resources */,
 			);
