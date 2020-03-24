@@ -1,5 +1,8 @@
 # FaceBookFriendsDemo
 FaceBookFriends
 
-# Realm
-Using Realm for local database
+## Building Project
+`pod install`
+
+# Dependencies
+- Using Realm for local database
