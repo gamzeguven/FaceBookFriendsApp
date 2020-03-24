@@ -6,7 +6,6 @@
 //  Copyright © 2020 Gamze Güven. All rights reserved.
 //
 
-import Foundation
 import RealmSwift
 
 class Post: Object, Codable {

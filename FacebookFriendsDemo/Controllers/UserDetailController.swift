@@ -22,7 +22,6 @@ class UserDetailController: UIViewController {
     public var userFriend: Post?
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         nameLabel.text = userFriend?.name
         aboutLabel.text = userFriend?.about

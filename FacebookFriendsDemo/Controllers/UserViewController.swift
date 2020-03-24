@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class UserViewController:  UIViewController, UITableViewDelegate, UITableViewDataSource {
+class UserViewController: UIViewController {
     
     @IBOutlet weak var userTable: UITableView!
     
@@ -23,7 +23,9 @@ class UserViewController:  UIViewController, UITableViewDelegate, UITableViewDat
         let nib = UINib(nibName: "UserCell", bundle: nil)
         userTable.register(nib, forCellReuseIdentifier: "UserCell")
     }
-    
+}
+
+extension UserViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return userFriendArray?.count ?? 0
     }
